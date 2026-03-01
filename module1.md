@@ -1,9 +1,9 @@
 <h1>Module 1: Introduction to Cloud</h1>
 ## AWS Cloud Benefits <br>
-- Elastic scalability — resources can scale up or down based on demand.<br>
-- Pay-as-you-go pricing model.<br>
-- Eliminates the need for physical data center investments.<br>
-- Global infrastructure enables low-latency access worldwide.<br>
+- Elastic scalability — resources can scale up or down based on demand.
+- Pay-as-you-go pricing model.
+- Eliminates the need for physical data center investments.
+- Global infrastructure enables low-latency access worldwide.
 <br>
 ## AWS Regions and AZ<br>
 -AWS is spread out through different regions. <br>
@@ -11,8 +11,7 @@
 -Availability Zones (AZs) are physically separate data centers within a region. If one AZ fails, traffic can automatically be routed to another AZ. Deploying applications across multiple AZs increases high availability and fault tolerance.<br>
 <br>
 
-## Shared Responsibility Model <br><br>
-
+## Shared Responsibility Model 
 AWS: Security **OF** the Cloud<br>
 - Global infrastructure<br>
 - Physical security<br>
