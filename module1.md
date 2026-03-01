@@ -9,7 +9,6 @@
 - AWS is spread out through different regions. <br>
 - Each AWS Region contains multiple Availability Zones (AZs), typically 3 or more. <br>
 - Availability Zones (AZs) are physically separate data centers within a region. If one AZ fails, traffic can automatically be routed to another AZ. Deploying applications across multiple AZs increases high availability and fault tolerance.<br>
-<br>
 
 ## Shared Responsibility Model 
 AWS: Security **OF** the Cloud<br>
