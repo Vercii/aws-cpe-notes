@@ -27,7 +27,7 @@ Lambda use cases:
 Key Components of Lambda:
 - Function: Instructions for when an event is triggered.
 - Triggers: The signal in which a function should be called.
-- Runtime: The time it takes for the function to start and finish.
+- Runtime: The language environment used to run the function (e.g., Node.js, Python, Java).
 
 ## Containers
 - Packages the application so it works the same on any computer, easing the process of moving, updating, and managing.
@@ -40,7 +40,7 @@ Key Components of Lambda:
 ## Orchestration
 - Automates deployment, scaling, and management. Useful for situations where containers reach the hundreds or thousands across multiple hosts, making them scale big and become too complex to manually handle.
 
-## Amazon Elastic Container Sercive (ECS)
+## Amazon Elastic Container Service (ECS)
 - A scalable container orchestration service for running and managing containers on AWS.
 
 Launch Types: <br>
@@ -51,7 +51,7 @@ Launch Types: <br>
 - Vanilla Kubernete is an open-source application, mostly known as a service too complex for beginners. Amazon EKS makes this easier by providing a fully managed service dedicated to running Kubernetes on AWS. Deploying, managing, and scaling containerized apps using open source Kubernetes are all simplified.
 
 Launch Types: <br>
-1. <b>EKS with EC2:</b> Best for companies needing full control over infrastructure. Offering deep customization of EC2 instances with Kubernetes scalibility. Ideal for complex, and large-scale workloads. <br>
+1. <b>EKS with EC2:</b> Best for companies needing full control over infrastructure. Offering deep customization of EC2 instances with Kubernetes scalability. Ideal for complex, and large-scale workloads. <br>
 2. <b>EKS with Fargate:</b> Best for implementing Kubernetes flexibilitiy without managing the servers. It combines Kubernetes power with serveerless simplicity. <br>
 
 ## Amazon Elastic Container Registry (ECR)
