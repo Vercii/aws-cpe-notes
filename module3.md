@@ -72,3 +72,13 @@ Launch Types: <br>
 
 ## Outposts
 - Fully managed hybrid cloud solution that combines AWS infrastructure with on-premises data centers, providing a consistent experience between on premises and AWS Cloud. Good for low-latency applications, data processing in remote locations, and modernizing legacy applications.
+
+## Choosing the Right Compute Option
+
+- EC2 - Full control, maximum responsibility
+- ECS/EKS - Container orchestration
+- Fargate - Serverless containers
+- Lambda - Event-driven serverless compute
+- Elastic Beanstalk - Simplified app deployment
+- Lightsail - Simple VPS-style hosting
+- Outposts - Hybrid cloud
