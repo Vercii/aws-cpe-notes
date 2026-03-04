@@ -1,9 +1,16 @@
-My learning notes while taking the AWS Cloud Practitioner Essentials. Started on Feb. 26, 2026.<br>
-Topics Covered:<br>
--Cloud Introduction<br>
--EC2 Instance Types<br>
--Containers and Orchestrations<br>
--AWS Regions<br>
--Infrastructure and Automation<br>
--Global Networking<br>
--Types of Storages
+<b>My learning notes while taking the AWS Cloud Practitioner Essentials. Started on Feb. 26, 2026.</b>
+## Topics Covered:
+- AWS Cloud Migration
+- AWS Databases
+- AI, ML, and Data Analytics
+- AWS Regions
+- Cloud Introduction
+- Containers and Orchestrations
+- EC2 Instance Types
+- Global Networking
+- Infrastructure and Automation
+- Monitoring Compliance in AWS Cloud
+- Pricing and Support
+- Security
+- Types of Storages
+- Well-Architected Solutions
