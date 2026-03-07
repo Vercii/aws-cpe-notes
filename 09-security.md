@@ -58,3 +58,50 @@ AWS automatically protects against low-level, brute-force attacks, such as DDoS,
 
 ## AWS WAF
 - A web application firewall that monitors network requests that come into your web applications. When a request comes into AWS WAF, it checks the IP address against a web access control list (web ACL). If the request comes from a blocked IP address on the web ACL, AWS WAF denies access. Legitimate requests are allowed access.
+
+## Data Encryption
+- Works like a lock and key mechanism. Having the right key can access the encrypted data. Otherwise, you cannot access the data.
+- An encryption key is used to turn the profile information into a randomized set of characters. A decryption key is used to access the customer's information, such as their name, only when it's needed by your application.
+
+Types:
+1. Data encryption at rest: The data is idle and not moving, like when it's stored in a database.
+
+2. Data encryption in transit: The data is moving between locations, like when it's being sent from a database to an application. SSL/TLS certificates are used to establish encrypted network connections from one system to another.
+
+# AWS Data Protection
+AWS has a variety of methods for protecting data. They include built-in data protection for storage options and services specifically designed for enhanced data protection.
+
+## AWS built-in data protection
+- By default, all new S3 buckets have encryption configured, and all uploaded objects are encrypted at rest.
+- Amazon EBS volumes and snapshots can be encrypted at rest, including both boot and data volumes of an Amazon EC2 instance.
+- Server-side encryption at rest is enabled on all DynamoDB table data using encryption keys stored in AWS Key Management Service (AWS KMS).
+
+# AWS Data Protection Services
+## AWS Key Management Service (AWS KMS)
+-  Create and manage cryptographic keys. These keys can then be used to encrypt and decrypt your data. You can also control the use of keys across a wide range of services and in your applications.
+-  You can specify which IAM users and roles can manage keys. Your keys never leave AWS KMS, and you can temporarily disable them so they can no longer be used.
+
+## Amazon Macie
+- Monitor your sensitive data at rest to make sure it's safe. Macie uses machine learning (ML) and automation to discover sensitive data stored in Amazon S3. You can use Macie to assess your security posture, which is especially helpful for meeting compliance requirements.
+
+## AWS Certificate Manager (ACM)
+- Centralizes the management of your SSL/TLS certificates that provide data encryption in transit (data that is moving). It can be used to protect various AWS services and your connected on-premises resources.
+
+# Detection and Response Services
+AWS offers a variety of services you can use to detect and respond to security incidents.
+
+## Amazon Inspector
+-  Helps improve the security and compliance of applications by running automated security assessments for Amazon EC2 instances, containers, and Lambda functions.
+-  It checks applications for security vulnerabilities and deviations from security best practices, such as open access to EC2 instances and installations of vulnerable software versions.
+
+## Amazon GuardDuty
+- Provides intelligent threat detection across your infrastructure and resources. GuardDuty identifies threats by continuously monitoring streams of your account metadata and network activity in your environment.
+- It uses known malicious IP addresses, anomaly detection, and machine learning to identify threats more accurately.
+
+## Amazon Detective
+- After a threat has been detected, you can use Amazon Detective to further investigate the root cause. Detective helps you analyze threats with interactive visualizations contained in a unified AWS Management Console view.
+- These visualizations include resource and user interactions over a configurable timeline with recommended steps for remediation.
+
+AWS Security Hub
+- Brings multiple security services together into a single place and format. With this service, you can quickly see your security and compliance state in one comprehensive view.
+- Security Hub automatically aggregates security findings from AWS and partner services and organizes them into actionable, meaningful groupings called insights. It can accelerate time to resolution (TTR) with automated remediation.
