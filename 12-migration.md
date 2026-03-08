@@ -67,3 +67,56 @@ Here are some of the perspectives to consider when migrating:
 5. Repurchase - moving from a traditional to SaaS model.
 6. Retain - Keeping applications that are critical for the business in the source environment. 
 7. Retire - Removing applications that are no longer needed.
+
+# Migration Services and Tools
+## Migration Evaluator (Assess Phase)
+- A migration assessment service that helps you create a business case for AWS Cloud planning and migration. It does this with a data driven approach, analyzing your current state, target state, and developing a migration readiness plan with projected cloud costs.
+- Removes the guesswork when migrating, provides visibility into multiple cost-effective cloud migration scenarios, and also gives insights on reusing existing software licensing, which can reduce costs.
+- You can use Migration Evaluator to conduct broad-based discovery, take a snapshot of your current on-premises footprint to fine-tune licensing, view server dependencies, and gain visibility into multiple migration scenarios. You can also use it to estimate and reduce your cloud costs.
+
+## Application Discovery Service (Mobilize Phase)
+- Discovers on-premises server inventory and connections. It gathers configuration, performance, and connection details for both servers and databases to create a detailed migration plan.
+- Get a comprehensive snapshot of your on-premises inventory. You also can integrate discovery data with other services like Migration Hub and protect the data Application Discovery Service collects.
+
+## Migration Hub
+- A centralized hub to take you from discovery, assessment, planning, and execution of your migration. It provides tools, guidance, and automated recommendations to collaborate with your team and track your migration.
+- With the Migration Hub, you have one location to go for your migration and, expert guidance in the form of prescriptive journey templates.
+- You can use Migration Hub for migration assessment and planning and migration completion and collaboration with teams.
+
+## Application Migration Service (Migrate and Modernize Phase)
+- It is a tool to move and improve your on-premises and cloud-based applications since it makes it possible to modernize your applications during migration. You can maintain normal business operations during the application replication process and also reduce costs by using one tool for a wide range of applications.
+- You can use the Application Migration Service for on-premises applications running on physical servers or infrastructure, cloud-based applications, or moving between AWS Regions. You can also use it to modernize applications.
+
+# Migrating Databases
+## AWS DMS
+- The AWS Database Migration Service (AWS DMS) makes it possible to quickly and securely migrate databases and perform ongoing data replication tasks for live databases and data warehouses.
+- It supports homogenous and heterogenous migrations. It also makes it possible to migrate terabyte sized databases at a low cost.
+- You can use AWS DMS to move to managed databases, remove licensing costs, replicate ongoing changes in your database, and improve integration with data lakes.
+
+## AWS SCT
+- The AWS Schema Conversion Tool makes it possible to convert database schemas and code objects (like stored procedures, views, and functions) from one database engine to another.
+- Simplify database migrations by automating schema analysis, recommendations, and conversion at scale.
+- Compatible with popular databases and analytics services as source and target engines. It can save weeks or months of manual time and resources, which are typically required in conversions.
+- You can use AWS SCT to move from commercial databases to open source databases.
+
+# Transferring Data Online
+## AWS DataSync
+- Designed for automating and accelerating data transfer.
+- Accelerates moving large amounts of data between on-premises storage and AWS storage services like Amazon S3.
+- DataSync manages data movement workloads with bandwidth throttling, migration scheduling, task filtering, and task reporting.
+- Provides data replication.
+- You can use DataSync to migrate your data, archive your cold data, and manage hybrid data workflows.
+
+## AWS Transfer Family
+- Provides fully managed support for secure file transfers over FTP, Secure File Transfer Protocol (SFTP), File Transfer Protocol Secure (FTPS), and other protocols.
+- The Transfer Family provides secure data transfer with encryption and authentication, to ensure data integrity and confidentiality. It is built to scale and streamline workflows.
+- You can use the Transfer Family to modernize and manage your file transfers, simplify data sharing with your workforce and partners, and integrate transactional business data into a unified data lake.
+
+## Direct Connect
+- A service that makes it possible for you to establish a dedicated private connection between your network and virtual private cloud (VPC) in the AWS Cloud. Helping reduce the network costs and increase amount of bandwidth.
+
+# Transferring Data Offline
+## Snowball Edge Storage Optimized devices
+- These devices deliver high performance NVMe storage, making it possible to simplify multi-petabyte data migrations from on-premises locations to AWS.
+- Better compute performance and larger storage capacity with gigabytes of data per second for data migration workloads with offline requirements.
+- You can use Snowball Edge devices for data migration when offline migration is required. They can also be used for edge computing when a secure, rugged device is needed.
