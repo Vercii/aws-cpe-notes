@@ -49,3 +49,15 @@ A network of connected physical devices embedded with sensors and software that 
 ### AWS IoT Core
 - A managed cloud service used to securely connect physical devices with cloud applications. It helps you create efficient IoT solutions by streamlining the complex process of ingesting, processing, and acting on device data.
 -  Device connections and data are secured with mutual authentication and end-to-end encryption, and you can choose from several communication protocols.
+
+## Well-Architected Framework Pillars
+- Operational Excellence
+- Security
+- Reliability
+- Performance Efficiency
+- Cost Optimization
+- Sustainability
+
+## AWS Well-Architected Tool
+- A free service that helps assess and improve cloud workloads based on the six key pillars. Offers workload reviews, milestone tracking, and custom lenses for tailored evaluations and improvement plans.
+- Ideal for architects, engineers, and compliance teams, and it promotes consistent, actionable, and well-documented architecture reviews.
