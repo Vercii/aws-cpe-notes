@@ -48,3 +48,19 @@
 | Core AWS Trusted Advisor checks | Core AWS Trusted Advisor checks | Full set of AWS Trusted Advisor checks | Full set of AWS Trusted Advisor checks | Full set of AWS Trusted Advisor checks and prioritized recommendations by AWS account team |
 | Technical Account Management not included | Technical Account Management not included | Technical Account Management not included | A pool of technical account managers (TAMs) provide proactive guidance | A designated TAM provides consultative architectural and operational guidance |
 
+## AWS Marketplace
+- A digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS. For each listing in AWS Marketplace, you can access detailed information on pricing options and reviews from other AWS customers.
+
+## AWS Partner Network
+- APN is a global community that uses AWS technologies, programs, expertise, and tools to build solutions and services for customers.
+- You can work with AWS Partners to create or use specialized solutions that are tailored to your unique business needs. For example, a retail company might use AWS to host their website. They could then work with an AWS Partner who specializes in advanced analytics and machine learning to improve customer personalization on that website.
+
+## AWS re:Post
+- A community-driven, question-and-answer platform provided where users can seek help, share knowledge, and find solutions related to AWS services and technologies.
+
+## AWS Trust and Safety Center
+- Offers guidance on reporting abuse, protecting applications, and following best practices for digital messaging on AWS.
+
+## AWS Professional Services
+- Highlights how AWS experts help organizations accelerate cloud adoption with tailored guidance across industries and technologies.
+
