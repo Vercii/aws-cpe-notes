@@ -58,4 +58,12 @@ Here are some of the perspectives to consider when migrating:
   - Roles for this are:
     - IT Operations Managers
     - IT Support Managers
-  
+
+## The 7 Rs
+1. Relocate - changing the hosting location to the cloud.
+2. Rehost - aka lift and shift. Move apps without changes.
+3. Replatform - aka lift, tinker, and shift. Make a few cloud optimizations, this is achieved without changing the core architecture of the app.
+4. Refactor - aka re-architecting. Reimagining how the app is developed by using built features for the cloud. Done when adding features, scaling, and/or improving performance would be difficult to be done in the app's current environment.
+5. Repurchase - moving from a traditional to SaaS model.
+6. Retain - Keeping applications that are critical for the business in the source environment. 
+7. Retire - Removing applications that are no longer needed.
