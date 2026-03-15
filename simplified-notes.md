@@ -66,7 +66,7 @@ To sum it up:
 - ELB distributes traffic.
 
 # How a website actually works
-## Hosting and Delivery
+## 1. Hosting and Delivery
 S3 is where ALL your website files live. Images, HTML files, JS, CSS Styles are all organized inside buckets. Buckets act like root folder of your website.
 
 S3 is powerful for web hosting because of its <b> Versioning Feature </b>.
@@ -78,7 +78,7 @@ When someone is watching a show in Netflix (that uses AWS), they're not watching
 
 CloudFront can also be a security tool. Through Signed URLs and Cookies, you can control who gets access to your content. CloudFront also works with AWS WAF to protect your website from attacks. WAF watches the traffic and looks out for any suspicious, blocking them.
 
-## Running the Backend
+## 2. Running the Backend
 Ways to handle backend operations:
 1. Serverless with API Gateway & Lambda
    - When an action occurs, the API Gateway receives the request and directs it to the right Lambda function.
@@ -95,6 +95,25 @@ Ways to handle backend operations:
    - Your application will run exactly the same way in development, testing, and production.
   
 ### When to use each service
-<b>Lambda</b> - Unpredictable traffic, pay per request, and scenarios where you don't want server management.
-<b>EC2</b> - Full OS control, pay for uptime, persistent workloads, or have apps with specific dependencies. 
-<b>ECS</b> - Perfect for applications with multiple services that need to run consistently across environments, allowing updates to only the parts that change.
+- <b>Lambda</b> - Unpredictable traffic, pay per request, and scenarios where you don't want server management.
+- <b>EC2</b> - Full OS control, pay for uptime, persistent workloads, or have apps with specific dependencies. 
+- <b>ECS</b> - Perfect for applications with multiple services that need to run consistently across environments, allowing updates to only the parts that change.
+
+## 3. Database Solutions
+- S3 - An infinite scalable object storage used for storing files. Each file is stored as an "object". Ideal for storing things that don't need to be modified frequently. You either get the whole file or nothing.
+Databases - Designed for data that needs to be queried, updated, and has relationships between different pieces of information. DBs let you work with individual pieces of a larger structure. AWS offers two different types of databases:
+    - Amazon RDS - Data is organized in tables similar to an Excel spreadsheet where tables can be connected. You can write specific commands to find and update the exact data that you need.
+      - Perfect for information that fits neatly into tables with clear relationships between them.
+        - An e-commerce website needs to categorize which user is connected to a product, and which product is connected to a seller.
+    - DynamoDB - AWS's NoSQL Database, it is built for speed and scale. It can handle massive amounts of data while still responding in milliseconds.
+      - Perfect for applications that require massive scale, low latency, or flexible data structures.
+        - Good for tracking delivery positions. Their locations are updated every few seconds requiring a system that can handle frequent changes while providing INSTANT access to the latest state.
+
+Both RDS and DynamoDB can integrate with other AWS Services, and modern applications are likely to use both types of databases together.
+
+You might keep core data in RDS where you need strong relationships and complex queries. While using DynamoDB for things like fast user sessions and/or real-time features.
+
+<b>Summary:</b>
+- RDS = relational, structured, complex queries
+- DynamoDB = high-scale, low latency, flexible schema
+- S3 = file/object storage (images, videos, backups)
