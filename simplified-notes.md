@@ -59,7 +59,42 @@ Together they help build multiple layers of security.
      - Auto Scaling ELB can create new servers automatically when you need more capacity, and remove them when you don't. <br><br>
      
 To sum it up:
+- Route 53 helps people find a web server.
 - AWs S3 handles file storage. 
 - CloudFront delivers content quickly. 
 - AWS VPC provides network isolation.
 - ELB distributes traffic.
+
+# How a website actually works
+## Hosting and Delivery
+S3 is where ALL your website files live. Images, HTML files, JS, CSS Styles are all organized inside buckets. Buckets act like root folder of your website.
+
+S3 is powerful for web hosting because of its <b> Versioning Feature </b>.
+- Versioning makes S3 keep track of all of the previous versions. Making it easy to revert versions when an accident occurs.
+- CloudFront helps users access these files quickly. Instead of serving all of the content from one location, CF copies all of the files from data centers around the world.
+
+### Real Life Application 
+When someone is watching a show in Netflix (that uses AWS), they're not watching it from one central data center. CloudFront's content delivery network means if someone is watching in Tokyo, they are streaming from a Tokyo data center.
+
+CloudFront can also be a security tool. Through Signed URLs and Cookies, you can control who gets access to your content. CloudFront also works with AWS WAF to protect your website from attacks. WAF watches the traffic and looks out for any suspicious, blocking them.
+
+## Running the Backend
+Ways to handle backend operations:
+1. Serverless with API Gateway & Lambda
+   - When an action occurs, the API Gateway receives the request and directs it to the right Lambda function.
+   - The Lambda function is what automates the logic in milliseconds. It is made to automatically scale to handle any number of requests.
+   - Less responsibilities to handle, but the environment could be a little restricted.
+2. EC2 & Virtualization
+   - When launching an EC2 instance, you're getting a Virtual Server in AWS's data centers. You can scale up or down whenever you need, unlike traditional servers.
+   - You get to choose the OS, install any software, configure security settings, and manage it just like you would with a physical server.
+   - Ideal for custom applications that have specific dependencies.
+   - You are in charge of managing your servers, you have more control but it also comes with more responsibilities.
+3. Containers with ECS (Elastic Container Service)
+   - It sits BETWEEN serverless and traditional servers. It solves the challenge of running applications consistently in different environments.
+   - Specific versions of PLs, libraries, configuration files, and dependencies are packaged together in a standardized way.
+   - Your application will run exactly the same way in development, testing, and production.
+  
+### When to use each service
+<b>Lambda</b> - Unpredictable traffic, pay per request, and scenarios where you don't want server management.
+<b>EC2</b> - Full OS control, pay for uptime, persistent workloads, or have apps with specific dependencies. 
+<b>ECS</b> - Perfect for applications with multiple services that need to run consistently across environments, allowing updates to only the parts that change.
