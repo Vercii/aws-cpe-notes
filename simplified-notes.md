@@ -117,3 +117,36 @@ You might keep core data in RDS where you need strong relationships and complex 
 - RDS = relational, structured, complex queries
 - DynamoDB = high-scale, low latency, flexible schema
 - S3 = file/object storage (images, videos, backups)
+
+## 4. AI and Machine Learning
+- AWS offers Amazon Bedrock, and Sagemaker.
+- Amazon Bedrock gives you access to foundation AI models created by companies like Anthropic, Meta, and others in a single interface.
+  - Instead of building from scratch, you can get ready-to-go models, customize them, and plug them into your application.
+  - Supports RAG (Retrieval-Augmented-Generation), which lets the model give up-to-date answers pulled from your database.
+- SageMaker lets you have full control in letting you train, build, and deploy your own machine learning model.
+  - Perfect for predicting user behavior, detecting fraud, or recommending products since it can utilize pattern recognition.
+ 
+<b>Summary:</b>
+- Bedrock = Use AI models
+- Sagemaker = Build AI models 
+
+Both can integrate seamlessly with your existing architecture.
+
+## 5. Security
+AWS offers two services that serve as the backbone for security; VPC and IAM.
+
+- VPC (Virtual Private Cloud) - Your own private section in AWS's cloud where you control how your app's networking works. You control how resources communicate, which ones can access the internet, and which remain private.
+
+- IAM - Controls who can access what within your AWS environment. Give every user or service only the permissions they need, and <b>nothing more</b>.
+  - You can create an IAM role that allows a specific Lambda function that needs to use a Bedrock AI model to analyze data.
+  - You can create an IAM role that permits to read data but not to modify it.
+ 
+### Full Picture
+- VPC isolates your entire network.
+- Public and private subnets separate your internet-facing resources from your internal ones.
+- NAT Gateways allow resources in private subnets to access the internet without being directly exposed to it.
+- Network ACLs protect traffic at subnet level.
+- Security groups protect traffic at instance level.
+- IAM ensures that every component only has the permissions it needs.
+
+Security isn't optional, it's something you add from the beginning.
