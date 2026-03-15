@@ -7,7 +7,7 @@
 IP Addresses are hard to remember since they are a string of numbers and letters. People use domain names instead.
 
 ## DNS Domain Name System
-- AWS uses <i>Route53</i>. It converts domain names into IP addresses that computers understand.
+- AWS offers <i>Route 53</i>. It converts domain names into IP addresses that computers understand.
 
 When using the internet, such as loading a website or sending an email; everything starts with packets.
 
@@ -18,7 +18,7 @@ When using the internet, such as loading a website or sending an email; everythi
   - Source IP: Where it came from
 
 This is all handled by TCP/IP.
-  - TCP: Breaks down data and make sure it <b>arrives</b> correctly.
+  - TCP: Breaks down data into packets and make sure it <b>arrives</b> correctly.
   - IP: Makes sure the data gets to the right <b>destination</b>.
 
 IP makes sure that it gets there while TCP makes sure that it gets there <b>complete</b>.
@@ -60,7 +60,7 @@ Together they help build multiple layers of security.
      
 To sum it up:
 - Route 53 helps people find a web server.
-- AWs S3 handles file storage. 
+- AWS S3 handles file storage. 
 - CloudFront delivers content quickly. 
 - AWS VPC provides network isolation.
 - ELB distributes traffic.
@@ -77,6 +77,15 @@ S3 is powerful for web hosting because of its <b> Versioning Feature </b>.
 When someone is watching a show in Netflix (that uses AWS), they're not watching it from one central data center. CloudFront's content delivery network means if someone is watching in Tokyo, they are streaming from a Tokyo data center.
 
 CloudFront can also be a security tool. Through Signed URLs and Cookies, you can control who gets access to your content. CloudFront also works with AWS WAF to protect your website from attacks. WAF watches the traffic and looks out for any suspicious, blocking them.
+
+AWS WAF protects web applications from common attacks such as:
+
+- SQL injection
+- Cross-site scripting (XSS)
+- Bots and malicious traffic
+
+It works together with CloudFront, API Gateway, and ALB to filter incoming requests
+
 
 ## 2. Running the Backend
 Ways to handle backend operations:
@@ -119,7 +128,7 @@ You might keep core data in RDS where you need strong relationships and complex 
 - S3 = file/object storage (images, videos, backups)
 
 ## 4. AI and Machine Learning
-- AWS offers Amazon Bedrock, and Sagemaker.
+- AWS offers Amazon Bedrock, and SageMaker.
 - Amazon Bedrock gives you access to foundation AI models created by companies like Anthropic, Meta, and others in a single interface.
   - Instead of building from scratch, you can get ready-to-go models, customize them, and plug them into your application.
   - Supports RAG (Retrieval-Augmented-Generation), which lets the model give up-to-date answers pulled from your database.
@@ -150,3 +159,14 @@ AWS offers two services that serve as the backbone for security; VPC and IAM.
 - IAM ensures that every component only has the permissions it needs.
 
 Security isn't optional, it's something you add from the beginning.
+
+## 6. Monitoring
+- CloudTrail - Records every API call and action made in your AWS account. It logs who made the request, when it happened, and what changes were made. This is useful for auditing activities like IAM changes or VPC configuration updates.
+  
+- CloudWatch - Monitors the health and performance of your AWS resources. You can create dashboards to visualize important metrics and set up alerts when something goes wrong.
+
+CloudWatch gives you the performance metrics while CloudTrail gives you the audit trail when things go wrong. 
+
+<b>Summary:</b>
+- CloudWatch - Shows what happens.
+- CloudTrail - Shows the cause.
